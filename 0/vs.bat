@@ -1,0 +1,2 @@
+vspipe.exe "%~1" -c y4m - | x265.exe --y4m - --crf 18 --preset slower --no-sao --deblock -1:-1 --bframes 10 --merange 48 --tu-intra-depth 4 --tu-inter-depth 4 --fades --tskip --rc-lookahead 240 --min-keyint 10 --allow-non-conformance -o "%~dpn1.hevc"
+pause

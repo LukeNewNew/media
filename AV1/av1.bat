@@ -1,0 +1,2 @@
+ffmpeg.exe -nostdin -hide_banner -loglevel error -i "%~1" -vf format=yuv420p10le -strict -1 -f yuv4mpegpipe - | SvtAv1EncApp.exe -i - --crf 26 --keyint 15s --preset 4 --enable-dlf 2 --enable-cdef 1 --enable-restoration 0 --enable-tf 0 --scd 1 --scm 0 --tune 3 --enable-variance-boost 1 --variance-octile 5 --film-grain 0 --film-grain-denoise 0 --enable-qm 1 --qm-min 3 --sharpness 2 --max-32-tx-size 1 --noise-norm-strength 1 --qp-scale-compress-strength 0 --progress 2 -b "%~dpn1_svt.ivf"
+pause

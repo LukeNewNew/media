@@ -1,0 +1,14 @@
+-vf
+
+format=yuv420p
+format=yuv420p10le
+
+scale=iw/2:-2
+vpp_qsv=w=iw/2:h=ih/2
+
+hqdn3d=luma_spatial=2.5
+
+
+trim=start_frame=0:end_frame=4900
+
+crop=in_w:in_h-654
